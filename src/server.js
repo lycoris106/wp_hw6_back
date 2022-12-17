@@ -1,8 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose'
 import cors from 'cors';
-import monDb from './db';
-import ScoreCard from './models/ScoreCard';
+import monDb from './db.js';
+import ScoreCard from './models/ScoreCard.js';
 import routes from './routes';
 
 
