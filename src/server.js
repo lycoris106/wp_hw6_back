@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 import cors from 'cors';
 import monDb from './db.js';
 import ScoreCard from './models/ScoreCard.js';
-import routes from './routes';
+import route1 from './routes/index.js';
+import route2 from './routes/scoreCard.js';
 
 
 const app = express();
@@ -17,7 +18,8 @@ app.get('/', (req, res, next) => {
   next();
 });
 
-app.use('/', routes);
+app.use('/', route1);
+app.use('/', route2);
 
 
 app.listen(port, () =>
